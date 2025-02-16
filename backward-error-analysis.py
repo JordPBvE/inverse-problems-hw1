@@ -14,6 +14,8 @@ K = la.toeplitz(c)
 U, S, Vt = np.linalg.svd(K)
 Kinv = Vt.T @ np.diag(1 / S) @ U.T
 
+print(S.shape)
+
 # Define functions
 functions = {
     "Step Function": abs(x - 0.5) < 0.2,
